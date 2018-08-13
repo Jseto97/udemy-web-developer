@@ -1,0 +1,30 @@
+document.getElemenetById();
+document.getElementsByClassName(); returns a node list (array lite) cant use forEach on a list
+document.getElementsByTagName();
+document.querySelector(); select using css selectors, multiple selectors e.g a class will return the first thing found querySelector returns ONE thing
+document.querySelectorAll(); selects everything e.g a class all object are selected
+
+//classlist -> adds classes, can also remove classes and toggle
+// defined in css add calss to change styles in a page
+//call classlist using . syntax element.classlist will return a list of all the classes currently assigned to the element
+
+//textcontent method
+// used to grab content withint a getElementsByTagName
+//var content = document.querySelector("p");
+//call content.textContent; will return the text within the p tags
+// can also set content e.g content.textContent = blah blah blah;
+
+//innerhtml method
+//similair to textcontnt method with the caveat it grabs all the html in the tag
+
+//get attribute
+// set attribute, both deals with href
+
+
+//Events
+//element.addEventListener(tyoe, functionToCall);
+
+var button = document.querySelector("button");
+button.addEventListener("click", function() {
+    console.log("your button was clicked");
+});

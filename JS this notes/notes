@@ -1,0 +1,17 @@
+JS "this" has for rules
+1. global scope, if the this keyword is NOT used in an object the value of this is the global object -> window
+  -> using this in a function (NOT OBJECT) such as this.property, will refer still to the global object, meaning you will accidentally create
+    a global variable. Use strict mode --> "Use Strict" to circumvent this in this case calling this will == undefined
+2. Implicit, if used in an object the value becomes the closest parent object
+  -> nested objects -> still the closest parent object
+3. Explicit Binding, allows you to set the value of this, however it can ONLY be used by functions
+  -> Method 1
+      Call:
+        Parameters: thisArg = set this to w.e you want, a, b, c...
+        Invoke Immediately: Yes
+      Apply:
+        Parameters: thisArg, [a,b,c]
+        Invoke Immediately: Yes
+      Bind:
+        Recalls a new function definition with the Value of This Explicitly Set
+        Not invoked Immediately
